@@ -41,7 +41,7 @@ const getMyTask = async (req, res, next) => {
   try {
     const { id } = req.user;
 
-    const allTask = await Task.findOne({ user: id });
+    const allTask = await Task.find({ user: id });
 
     res.status(200).json({
       success: true,
