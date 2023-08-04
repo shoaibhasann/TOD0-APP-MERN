@@ -16,13 +16,19 @@ const register = async (req, res, next) => {
 
     // check all fields are provided
     if (!name || !email || !password) {
-      return next(new AppError(400, "All fields are required"));
+      return res.status(400).json({
+        success: false,
+        message: 'All fields are required'
+      })
     }
 
     // check if user already exists
     const userExists = await User.findOne({ email });
     if (userExists) {
-      return next(new AppError(400, "Email already exists"));
+      return res.status(400).json({
+        success: false,
+        message: 'Email already exists'
+      })
     }
 
     // create new user
@@ -65,7 +71,10 @@ const login = async (req, res, next) => {
 
     // Check if all fields are provided
     if (!email || !password) {
-      return next(new AppError(400, "All fields are required"));
+            return res.status(400).json({
+              success: false,
+              message: "All fields are required",
+            });
     }
 
     // Find the user in the database
@@ -73,7 +82,10 @@ const login = async (req, res, next) => {
 
     // Check if the user exists
     if (!user) {
-      return next(new AppError(400, "User not found"));
+            return res.status(400).json({
+              success: false,
+              message: "User not found",
+            });
     }
 
     // Compare passwords using the comparePassword method
@@ -81,7 +93,10 @@ const login = async (req, res, next) => {
 
     // Check if the password matches
     if (!isPasswordMatch) {
-      return next(new AppError(400, "Password is incorrect"));
+            return res.status(400).json({
+              success: false,
+              message: "Password is incorrect",
+            });
     }
 
     // Generate JWT token
