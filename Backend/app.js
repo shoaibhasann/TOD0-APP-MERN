@@ -7,7 +7,8 @@ import cors from "cors";
 
 const app = express();
 
-
+// Middleware for parse body request
+app.use(express.json());
 
 app.use(cookieParser());
 
