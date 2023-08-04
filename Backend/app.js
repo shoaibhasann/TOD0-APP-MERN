@@ -2,7 +2,6 @@ import cookieParser from "cookie-parser";
 import express from "express";
 import userRoutes from "./routes/user.route.js"
 import taskRoutes from "./routes/task.route.js"
-import errorMiddleware from "./middlewares/error.middleware.js";
 import cors from "cors";
 
 const app = express();
@@ -30,7 +29,5 @@ app.use('*', (req,res) => {
     res.status(404).send("OOPS! Page not found.");
 });
 
-// Middleware for error handling
-app.use(errorMiddleware);
 
 export default app;
