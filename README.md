@@ -2,6 +2,10 @@
 
 TaskNinja Backend is the backend component of the TaskNinja application, built using Express.js, MongoDB, and other technologies. It provides the necessary API endpoints for user authentication and task management.
 
+## Live Preview
+
+Check out the live preview of TaskNinja: [TaskNinja Live Preview](https://task-ninja-frontend.vercel.app/)
+
 ## API Endpoints
 
 ### User Routes
