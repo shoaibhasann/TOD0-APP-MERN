@@ -61,5 +61,5 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 
 For inquiries or support, please contact:
-- Your Name: your@email.com
-- Project Repository:[ [GitHub(https://github.com/shoaibhasann/TaskNinja-Backend)https://github.com/shoaibhasann/TaskNinja-Backend
+- shoaibhasan0940@gmail.com
+- Project Repository: [GitHub (https://github.com/shoaibhasann/TaskNinja-Backend)]
